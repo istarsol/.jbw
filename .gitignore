@@ -1,0 +1,4 @@
+*.log
+*.uuid
+*.sqlite
+*salt
