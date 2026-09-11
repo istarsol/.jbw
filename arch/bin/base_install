@@ -18,4 +18,12 @@ sudo pacman -S --needed \
   rsync \
   util-linux \
   vi \
-  vim \
+  vim
+
+echo
+echo "Installing common fonts"
+echo
+
+sudo pacman -S --needed \
+  terminus-font \
+  noto-fonts-extra
