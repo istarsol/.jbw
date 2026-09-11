@@ -1,1 +1,21 @@
+#!/usr/bin/env bash
 
+echo
+echo "Installing packages common for arch"
+echo
+
+sudo pacman -S --needed \
+  base \
+  base-devel \
+  bash-completion \
+  intel-ucode \
+  linux \
+  linux-headers \
+  man-db \
+  nano \
+  neovim \
+  openssh \
+  rsync \
+  util-linux \
+  vi \
+  vim \
