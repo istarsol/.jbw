@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+echo
+echo "Install gaming tools"
+echo
+
+sudo pacman -S --needed \
+  cachyos-gaming-applications \
+  cachyos-gaming-meta \
+  gamemode \
+  lib32-gamemode \
+  protonup-qt
+
+systemctl --user enable --now gamemoded
+
+sudo bash -c "echo -e 'vm.max_map_count = 2147483642' > /etc/sysctl.d/80-gamecompatibility.conf"

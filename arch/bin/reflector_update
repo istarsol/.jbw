@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+echo
+echo "Updating reflector config"
+echo
+
+sudo pacman -S --needed reflector
+
+sudo reflector \
+  --verbose \
+  --country US \
+  --age 5 \
+  --protocol https \
+  --sort rate \
+  --save /etc/pacman.d/mirrorlist

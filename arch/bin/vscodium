@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo
+echo "Install VSCodium"
+echo
+
+paru -S --needed vscodium-bin vscodium-bin-marketplace

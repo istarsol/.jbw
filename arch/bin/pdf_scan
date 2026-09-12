@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo
+echo "Install PDF tools"
+echo
+
+sudo pacman -S --needed \
+  evince \
+  okular \
+  pdfarranger \
+  xournalpp
+
+echo
+echo "Install scanning tools"
+echo
+
+sudo pacman -S --needed \
+  sane \
+  simple-scan \
+  skanlite \
+  skanpage

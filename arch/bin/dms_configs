@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo
+echo "Install DMS config and host-specific settings with printer drivers"
+echo
+
 # Get hostname
 hname=$(more /etc/hostname)
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo
+echo "Install some very useful packages"
+echo
+
 sudo pacman -S --needed \
   bat \
   btop \

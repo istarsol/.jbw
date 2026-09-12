@@ -20,13 +20,3 @@ sudo pacman -S --needed \
   util-linux \
   vi \
   vim
-
-echo
-echo "Installing common fonts"
-echo
-
-sudo pacman -S --needed \
-  terminus-font \
-  noto-fonts \
-  noto-fonts-emoji \
-  noto-fonts-extra

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo
+echo "Install Kdenlive"
+echo
+
+sudo pacman -S --needed \
+  kdenlive \
+  kimageformats \
+  qt6-imageformats

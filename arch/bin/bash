@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
+echo
+echo "Install bash config files"
+echo
+
+# Remove any existing files
 [[ -f ~/.bash_profile ]] && rm ~/.bash_profile
-[[ -f ~/.jbw/bash/dot-bash_profile ]] && cp ~/.jbw/bash/dot-bash_profile ~/.bash_profile
 [[ -f ~/.bashrc ]] && rm ~/.bashrc
-[[ -f ~/.jbw/bash/dot-bashrc ]] && cp ~/.jbw/bash/dot-bashrc ~/.bashrc
 [[ -d ~/.config/bashrc ]] && rm -rf ~/.config/bashrc
+
+# Install bash config files
+[[ -f ~/.jbw/bash/dot-bash_profile ]] && cp ~/.jbw/bash/dot-bash_profile ~/.bash_profile
+[[ -f ~/.jbw/bash/dot-bashrc ]] && cp ~/.jbw/bash/dot-bashrc ~/.bashrc
 [[ -d ~/.jbw/bash/dot-config ]] && cp -r ~/.jbw/bash/dot-config/bashrc ~/.config/

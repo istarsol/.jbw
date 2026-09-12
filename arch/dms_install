@@ -2,29 +2,15 @@
 
 cd ~/.jbw/arch
 
-source bin/workstation_install
 source bin/graphics
-
-echo
-echo "Install DMS"
-echo
-
-sudo -v && curl -fsSL https://install.danklinux.com | sh -s -- \
-  -c hyprland -t ghostty --dms-greeter --danksearch -y
-
-sudo pacman -S --needed \
-  acl \
-  cava \
-  kimageformats \
-  nautilus \
-  power-profiles-daemon \
-  uwsm
-
-dms-greeter enable
-dms-greeter sync
-
-systemctl --user enable dms
-
+source bin/basic_workstation	# Packages common to all installs
+source bin/pandoc_pip
+source bin/pdf_scan
+source bin/vlc
+source bin/kdenlive
+source bin/vscodium
+source bin/gameing
 source bin/dms_configs
+source bin/dms
 
 reboot

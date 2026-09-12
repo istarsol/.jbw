@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo
+echo "Installing common fonts"
+echo
+
+sudo pacman -S --needed \
+  terminus-font \
+  noto-fonts \
+  noto-fonts-emoji \
+  noto-fonts-extra

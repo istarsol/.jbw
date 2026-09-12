@@ -4,16 +4,6 @@ echo
 echo "Configuring pacman"
 echo
 
-sudo pacman -S --needed reflector
-
-sudo reflector \
-  --verbose \
-  --country US \
-  --age 5 \
-  --protocol https \
-  --sort rate \
-  --save /etc/pacman.d/mirrorlist
-
 sudo sed -i \
   -e '/ParallelDownloads/aILoveCandy' \
   -e '/^#\[multilib\]/s/^#//' \
