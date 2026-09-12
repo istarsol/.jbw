@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+echo
+echo "Moving hypr configs for DMS"
+echo
+
+# Remove any existing configs
+[[ -d ~/.config/hypr ]] && rm -rf ~/.config/hypr
+[[ -f ~/.config/DankMaterialShell/settings.json ]] && rm ~/.config/DankMaterialShell/settings.json
+
+# Make clean config directory
+
+mkdir -p ~/.config/hypr
+
+# Install fresh configs
+cp ~/.jbw/hypr/dot-config/dms-hypr/hyprland.lua ~/.config/hypr/
+cp -r ~/.jbw/hypr/dot-config/dms-hypr/dms ~/.config/hypr/
+cp ~/.jbw/hypr/dot-config/dms-hypr/settings.json ~/.config/DankMaterialShell/
+
+echo
+echo "Which monitor config do you want to use?"
+echo
+echo "*[1] Generic"
+echo " [2] esgaroth"
+echo " [3] gondolin"
+echo
+read -rp 'The default is marked (*). Return to continue or enter a selection: ' monitor
+case $monitor in
+  2)
+    cp ~/.jbw/hypr/dot-config/dms-hypr/esgaroth ~/.config/hypr/dms/outputs.lua
+    ;;
+  3)
+    cp ~/.jbw/hypr/dot-config/dms-hypr/gondolin ~/.config/hypr/dms/outputs.lua
+    ;;
+  *)
+    cp ~/.jbw/hypr/dot-config/dms-hypr/default ~/.config/hypr/dms/outputs.lua
+    ;;    
+esac

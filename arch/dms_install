@@ -25,4 +25,6 @@ dms-greeter sync
 
 systemctl --user enable dms
 
+source bin/dms_configs
+
 reboot
