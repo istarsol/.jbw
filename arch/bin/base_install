@@ -26,4 +26,6 @@ echo
 
 sudo pacman -S --needed \
   terminus-font \
+  noto-fonts \
+  noto-fonts-emoji \
   noto-fonts-extra
