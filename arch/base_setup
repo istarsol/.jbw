@@ -4,6 +4,7 @@ cd ~/.jbw/arch
 
 source bin/pacman_install	# Configue pacman and reflector, install CachyOS repos, and update the system
 source bin/base_install		# Install packages common to all arch installs
+source bin/setfont  # Set larger terminal font
 source bin/bash			# Setup bash nicetys
 source bin/cachyos_kernel	# Install the CachyOS kernel
 source bin/useful_packages	# Install nice packages for arch cli
