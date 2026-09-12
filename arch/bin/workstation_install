@@ -18,6 +18,7 @@ sudo pacman -S --needed \
   syncthing
 
 systemctl --user enable --now syncthing
+sudo systemctl enable avahi-daemon
 
 echo
 echo "Install pandoc and pip"

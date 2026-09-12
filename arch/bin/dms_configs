@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Get hostname
+hname=$(more /etc/hostname)
+
 echo
 echo "Moving hypr configs for DMS"
 echo
@@ -7,6 +10,8 @@ echo
 # Remove any existing configs
 [[ -d ~/.config/hypr ]] && rm -rf ~/.config/hypr
 [[ -f ~/.config/DankMaterialShell/settings.json ]] && rm ~/.config/DankMaterialShell/settings.json
+[[ -f ~/.gitconfig ]] && rm ~/.gitconfig
+[[ -f ~/.config/ghostty/config ]] && rm -rf ~/.config/ghostty/config
 
 # Make clean config directory
 
@@ -16,21 +21,17 @@ mkdir -p ~/.config/hypr
 cp ~/.jbw/hypr/dot-config/dms-hypr/hyprland.lua ~/.config/hypr/
 cp -r ~/.jbw/hypr/dot-config/dms-hypr/dms ~/.config/hypr/
 cp ~/.jbw/hypr/dot-config/dms-hypr/settings.json ~/.config/DankMaterialShell/
+cp ~/.jbw/git/dot-gitconfig ~/.gitconfig
+cp ~/.jbw/ghostty/dot-config/ghostty/config ~/.config/ghostty/
 
-echo
-echo "Which monitor config do you want to use?"
-echo
-echo "*[1] Generic"
-echo " [2] esgaroth"
-echo " [3] gondolin"
-echo
-read -rp 'The default is marked (*). Return to continue or enter a selection: ' monitor
-case $monitor in
-  2)
+case $hname in
+  esgaroth)
     cp ~/.jbw/hypr/dot-config/dms-hypr/esgaroth ~/.config/hypr/dms/outputs.lua
+    paru -S --needed brother-hll2340dw
     ;;
-  3)
+  gondolin)
     cp ~/.jbw/hypr/dot-config/dms-hypr/gondolin ~/.config/hypr/dms/outputs.lua
+    paru -S --needed brother-hll3270cdw
     ;;
   *)
     cp ~/.jbw/hypr/dot-config/dms-hypr/default ~/.config/hypr/dms/outputs.lua
