@@ -14,3 +14,5 @@ sudo sed -i \
   /etc/mkinitcpio.d/linux-cachyos.preset
 
 sudo bash -c "echo -e 'default\t\t\tarch-linux-cachyos.efi\ntimeout\t\t\t3\nconsole-mode\tkeep\neditor\t\t\tno' > /boot/loader/loader.conf"
+
+sudo mkinitcpio -P
