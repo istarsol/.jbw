@@ -5,4 +5,4 @@
 [[ -f ~/.bashrc ]] && rm ~/.bashrc
 [[ -f ~/.jbw/bash/dot-bashrc ]] && cp ~/.jbw/bash/dot-bashrc ~/.bashrc
 [[ -d ~/.config/bashrc ]] && rm -rf ~/.config/bashrc
-[[ -d ~/.jbw/bash/dot-config ]] && cp -r ~/.jbw/bash/dot-config/* ~/.config/
+[[ -d ~/.jbw/bash/dot-config ]] && mkdir ~/.config/bashrc && cp -r ~/.jbw/bash/dot-config/bashrc/* ~/.config/bashrc
