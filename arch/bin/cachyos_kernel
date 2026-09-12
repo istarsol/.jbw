@@ -9,7 +9,7 @@ sudo pacman -S --needed linux-cachyos linux-cachyos-headers
 sudo sed -i \
   -e "/default_image/s/^#*/#/" \
   -e "/default_uki/s/^#*//" \
-  -e "/default_uki/s/efi/boot/" \
+  -e "/default_uki/s/\/efi\//\/boot\//" \
   -e "/default_options/s/^#*//" \
   /etc/mkinitcpio.d/linux-cachyos.preset
 
