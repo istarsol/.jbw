@@ -1,0 +1,26 @@
+#######################################################
+# INIT
+#######################################################
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] &&
+
+# -----------------------------------------------------
+# Prompt
+# -----------------------------------------------------
+#tty -s && export PS1="\[\033[0;30m\][\!] \`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` \[\033[32m\]\u@\h:\[\033[36;1m\]\w\[\033[0m\]$ "
+
+# -----------------------------------------------------
+# History
+# -----------------------------------------------------
+# Don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options.
+HISTCONTROL=ignoreboth
+
+# Append to the history file; don't overwrite it.
+shopt -s histappend
+
+# Set history length and size.
+# See bash(1) for HISTSIZE and HISTFILESIZE.
+HISTSIZE=1000
+HISTFILESIZE=2000

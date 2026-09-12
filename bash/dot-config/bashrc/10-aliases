@@ -1,0 +1,76 @@
+#######################################################
+# ALIASES
+#######################################################
+
+# -----------------------------------------------------
+# General
+# -----------------------------------------------------
+
+# Fastfetch
+alias nf='fastfetch'
+alias pf='fastfetch'
+alias ff='fastfetch'
+
+# ls commands
+alias ls='eza -a --icons=always'
+alias ll='eza -al --icons=always'
+alias l='eza -l --icons=always'
+alias lt='eza -a --tree --level=1 --icons=always'
+
+# cat command
+alias cat='bat'
+
+# editor
+alias vim='nvim'
+
+# marp
+alias marp='npx marp'
+
+# reflector
+alias ru='sudo reflector --verbose --country US --age 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+
+# easy shutdown
+alias reboot='systemctl reboot'
+alias shutdown='systemctl poweroff'
+
+# safer file commands
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias grep='grep --color=auto'
+
+# system info
+alias df='df -h -x squashfs -x tmpfs -x devtmpfs -x efivarfs' # simplify df
+alias extip='curl icanhazip.com' # external ip address
+alias mount='mount | column -t'
+
+# -----------------------------------------------------
+# Git
+# -----------------------------------------------------
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gd='git diff'
+alias gp='git push'
+alias gpl='git pull'
+alias gst='git stash'
+alias gsp='git stash; git pull'
+alias gfo='git fetch origin'
+alias gcheck='git checkout'
+alias gcred='git config credential.helper store'
+
+# -----------------------------------------------------
+# Pacman
+# -----------------------------------------------------
+alias i='sudo pacman -S '
+alias p='paru -S '
+alias ss='sudo pacman -Ss '
+alias pss='paru -Ss '
+alias syy='sudo pacman -Syy'
+alias syu='sudo pacman -Syu'
+alias psyu='paru -Syu'
+
+# -----------------------------------------------------
+# Stow
+# -----------------------------------------------------
+alias stow='stow --dotfiles'
