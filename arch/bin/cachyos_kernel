@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+echo
+echo "Install CachyOS kernel"
+echo
+
+sudo pacman -S --needed linux-cachyos linux-cachyos-headers
+
+sudo sed -i \
+  -e "/default_image/s/^#*/#/" \
+  -e "/default_uki/s/^#*//" \
+  -e "/default_uki/s/efi/boot/" \
+  -e "/default_options/s/^#*//" \
+  /etc/mkinitcpio.d/linux-cachyos.preset
+
+sudo bash -c "echo -e 'default\t\t\tarch-linux-cachyos.efi\ntimeout\t\t\t3\nconsole-mode\tkeep\neditor\t\t\tno' > /boot/loader/loader.conf"

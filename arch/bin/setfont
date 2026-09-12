@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo
+echo "Setting a better terminal font"
+echo
+
+setfont ter-124b
+
+sudo sed -i -e "s/^FONT=.*/FONT=ter-124b/" /etc/vconsole.conf

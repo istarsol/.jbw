@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+echo
+echo "Configuring pacman"
+echo
+
+sudo pacman -S --needed reflector
+
+sudo reflector \
+  --verbose \
+  --country US \
+  --age 5 \
+  --protocol https \
+  --sort rate \
+  --save /etc/pacman.d/mirrorlist
+
+sudo sed -i \
+  -e '/ParallelDownloads/aILoveCandy' \
+  -e '/^#\[multilib\]/s/^#//' \
+  -e '/\[multilib\]/{n;s/^#//}' \
+  /etc/pacman.conf
+
+echo
+echo "Installing CachyOS repos and updating"
+echo
+
+curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+sudo ./cachyos-repo.sh
+cd .. && rm -rf cachyos-repo*

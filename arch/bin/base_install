@@ -8,12 +8,12 @@ sudo pacman -S --needed \
   base \
   base-devel \
   bash-completion \
+  git \
   intel-ucode \
   linux \
   linux-headers \
   man-db \
   nano \
-  neovim \
   openssh \
   rsync \
   util-linux \

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+sudo pacman -S --needed \
+  bat \
+  btop \
+  eza \
+  fastfetch \
+  fzf \
+  htop \
+  mkinitcpio-firmware \
+  paru \
+  stow \
+  tealdeer \
+  tmux
