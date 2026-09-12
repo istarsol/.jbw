@@ -3,6 +3,7 @@
 cd ~/.jbw/arch
 
 source bin/workstation_install
+source bin/graphics
 
 echo
 echo "Install DMS"
