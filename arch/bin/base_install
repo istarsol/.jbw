@@ -14,6 +14,7 @@ sudo pacman -S --needed \
   linux-headers \
   man-db \
   nano \
+  neovim \
   openssh \
   rsync \
   util-linux \
