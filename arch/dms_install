@@ -21,3 +21,8 @@ sudo pacman -S --needed \
   uwsm
 
 dms-greeter enable
+dms-greeter sync
+
+systemctl --user enable dms
+
+reboot
