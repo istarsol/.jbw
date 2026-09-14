@@ -1,0 +1,10 @@
+# GNOME Shortcut Name
+NAME="Logos"
+# Used for Descriptions and Window Class
+FULL_NAME="Logos Bible Software"
+# Path to executable inside Windows
+WIN_EXECUTABLE="C:\Users\brian\AppData\Local\Logos\Logos.exe"
+# GNOME Categories
+CATEGORIES="WinApps"
+# GNOME MIME Types
+MIME_TYPES=""

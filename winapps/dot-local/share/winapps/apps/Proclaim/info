@@ -1,0 +1,10 @@
+# GNOME Shortcut Name
+NAME="Proclaim"
+# Used for Descriptions and Window Class
+FULL_NAME="Church Presentation Software"
+# Path to executable inside Windows
+WIN_EXECUTABLE="C:\Users\brian\AppData\Local\Proclaim\Proclaim.exe"
+# GNOME Categories
+CATEGORIES="WinApps"
+# GNOME MIME Types
+MIME_TYPES=""

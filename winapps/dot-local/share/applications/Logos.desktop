@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Logos
+Exec=/home/brian/.local/bin/winapps Logos %F
+Terminal=false
+Type=Application
+Icon=/home/brian/.local/share/winapps/apps/Logos/icon.png
+StartupWMClass=Logos
+Comment=Logos Bible Software
+Categories=WinApps
+MimeType=

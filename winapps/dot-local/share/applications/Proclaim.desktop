@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Proclaim
+Exec=/home/brian/.local/bin/winapps Proclaim %F
+Terminal=false
+Type=Application
+Icon=/home/brian/.local/share/winapps/apps/Proclaim/icon.png
+StartupWMClass=Proclaim
+Comment=Church Presentation Software
+Categories=WinApps
+MimeType=
