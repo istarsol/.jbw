@@ -1,7 +1,7 @@
 -- DMS user keybind overrides (edit via Control Center or dms; do not remove this header)
 
 hl.unbind("SUPER + B")
-hl.bind("SUPER + B", hl.dsp.exec_cmd("brave"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("brave --password-store=basic"))
 hl.unbind("SUPER + F")
 hl.bind("SUPER + F", hl.dsp.exec_cmd("nautilus"))
 hl.unbind("SUPER + O")
